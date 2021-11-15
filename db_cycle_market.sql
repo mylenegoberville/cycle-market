@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 15 nov. 2021 à 11:54
+-- Généré le : lun. 15 nov. 2021 à 18:43
 -- Version du serveur :  8.0.21
 -- Version de PHP : 7.4.9
 
@@ -56,7 +56,16 @@ CREATE TABLE IF NOT EXISTS `annonce_status` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `annonce_status`
+--
+
+INSERT INTO `annonce_status` (`id`, `name`) VALUES
+(1, 'disponible'),
+(2, 'loué actuellement'),
+(3, 'réservé');
 
 -- --------------------------------------------------------
 
@@ -69,7 +78,15 @@ CREATE TABLE IF NOT EXISTS `category` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `category`
+--
+
+INSERT INTO `category` (`id`, `name`) VALUES
+(1, 'don'),
+(2, 'location');
 
 -- --------------------------------------------------------
 
@@ -215,7 +232,25 @@ CREATE TABLE IF NOT EXISTS `sub_category` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `sub_category`
+--
+
+INSERT INTO `sub_category` (`id`, `name`) VALUES
+(1, 'Vêtements'),
+(2, 'Ameublement'),
+(3, 'Électroménager'),
+(4, 'Décoration'),
+(5, 'Informatique'),
+(6, 'Livres'),
+(7, 'Bricolage'),
+(8, 'Jardinage'),
+(9, 'Vélos'),
+(10, 'Console & Jeux vidéo'),
+(11, 'Téléphonie'),
+(12, 'Instruments de musique');
 
 -- --------------------------------------------------------
 

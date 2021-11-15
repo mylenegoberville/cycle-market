@@ -28,16 +28,6 @@ class DataBase
         return $conn;
     }
 
-    public function select_id($query, $params=array())
-    {
-        $smth = $this->conn->prepare($query);
-        $smth->execute($params); 
-        if($smth !== false){
-            $smth = $smth->fetchAll();
-        }
-        return $smth;
-    }
-
     public function select_row($query, $params=array())
     {   
         $smth = $this->conn->prepare($query);
