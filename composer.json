@@ -3,9 +3,15 @@
     "authors": [
         {
             "name": "canelle delbreil",
-            "email": "canellesunshine@hotmail.fr"
+            "email": "canelledelbreil@gmail.com"
         }
     ],
+    "autoload": {
+      "psr-4" : {
+        "CycleMarket\\": "models/",
+        "Functions\\": "controllers/"
+      }
+    },
     "require": {
         "altorouter/altorouter": "1.1.0"
     }
