@@ -1,5 +1,7 @@
 <?php
 
+namespace CycleMarket;
+
 class Router {
 
   private $path;
@@ -49,7 +51,7 @@ class Router {
         require $this->path . DIRECTORY_SEPARATOR . $match['target'] . '.php';
       }
       $content = ob_get_clean();
-      require $this->path . DIRECTORY_SEPARATOR . "layout" . DIRECTORY_SEPARATOR . "default.php";
+      require $this->path . DIRECTORY_SEPARATOR . "layout" . DIRECTORY_SEPARATOR . "app.php";
     }
     return $match;
   }

@@ -1,5 +1,7 @@
 <?php
 
+namespace CycleMarket;
+
 class Annonce{
     private int $id;
     private string $name;

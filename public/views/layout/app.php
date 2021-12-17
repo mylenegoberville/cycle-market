@@ -1,6 +1,6 @@
 <?php
-$cat = getCategories();
-$sub = getSubCategories();
+    $cat = getCategories();
+    $sub = getSubCategories();
 ?>
 <!DOCTYPE html>
 <html lang="en">

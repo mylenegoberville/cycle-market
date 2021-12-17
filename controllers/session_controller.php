@@ -1,5 +1,4 @@
 <?php
-
 function isConnectedUser (): bool {
     if(session_status() === PHP_SESSION_NONE){
         session_start();
@@ -10,7 +9,7 @@ function isConnectedUser (): bool {
 function getCurrentUser()
 {
     if(isConnectedUser()){
-        $user = User::getById($_SESSION['current-user-id']);
+        $user = CycleMarket\User::getById($_SESSION['current-user-id']);
         return $user;
     }
     return; 

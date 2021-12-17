@@ -1,5 +1,7 @@
 <?php
 
+namespace CycleMarket;
+
 class SubCategory{
     private int $id;
     private string $name;

@@ -1,5 +1,7 @@
 <?php
 
+namespace CycleMarket;
+
 class DataBase
 {
     const HOST = 'localhost';
@@ -9,6 +11,8 @@ class DataBase
     const PASSWORD = '';
 
     const DATABASENAME = 'db_cycle_market';
+
+    const NAMESPACE = 'CycleMarket\\';
 
     private $conn;
 
@@ -43,7 +47,7 @@ class DataBase
         $smth = $this->conn->prepare($query);
         $smth->execute($params); 
         if($smth !== false){
-            $smth = $smth->fetchAll(\PDO::FETCH_CLASS, $fetchClass);
+            $smth = $smth->fetchAll(\PDO::FETCH_CLASS, self::NAMESPACE . $fetchClass);
         }
         return $smth;
     }
@@ -53,7 +57,7 @@ class DataBase
         $smth = $this->conn->prepare($query);
         $smth->execute($params); 
         if($smth !== false){
-            $smth->setFetchMode(\PDO::FETCH_CLASS, $fetchClass);
+            $smth->setFetchMode(\PDO::FETCH_CLASS, self::NAMESPACE . $fetchClass);
             $smth = $smth->fetch();
         }
         return $smth;

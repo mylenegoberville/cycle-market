@@ -1,5 +1,7 @@
 <?php
 
+namespace CycleMarket;
+
 class User{
     private int $id;
     private string $first_name;
