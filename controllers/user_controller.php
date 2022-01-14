@@ -45,3 +45,14 @@ function deleteUserById(int $id)
 {
     return CycleMarket\User::deleteById($id);
 }
+
+
+function validationLogin(string $mail, string $password)
+{
+    $mail = strtolower(htmlentities($mail));
+    $password = strtolower(htmlentities($password));
+    $res = CycleMarket\User::validerLogin($mail, $password);
+    return $res;
+}
+
+

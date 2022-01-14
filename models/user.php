@@ -126,5 +126,13 @@ class User{
         $query = "DELETE FROM `user` where id = " . $id;
         return $db->execute($query);
     }
+
+    public static function validerLogin(string $mail, string $password)
+    {
+        $db = new DataBase;
+        $req = "SELECT * FROM `user` where `mail`=$mail and `password`=$password ";
+        $res = $db->execute($req);
+        return $res;
+    }
 }
 
